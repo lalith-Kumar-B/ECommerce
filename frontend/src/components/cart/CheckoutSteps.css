@@ -1,0 +1,24 @@
+.stepper{
+    margin-top: 60px;
+}
+
+.MuiStepConnector-line {
+    display: none !important;
+}
+
+.MuiStepConnector-root {
+    height: 1px;
+}
+.MuiTypography-body1{
+    color: white;
+}
+
+.MuiStepper-root {
+    border-radius: 20px;
+    background-color: #2f2f2f !important;
+    position: relative;
+}
+.MuiStepConnector-active,
+.MuiStepConnector-completed {
+    background-color: #3f51b5;
+}

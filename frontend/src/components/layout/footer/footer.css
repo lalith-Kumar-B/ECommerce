@@ -1,0 +1,19 @@
+/* styles.css */
+
+/* Center the footer content vertically */
+.bg-body-tertiary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.mb-3.text-center .btn-link {
+  margin: 0 10px;
+}
+
+
+.text-center p {
+  font-size: 16px;
+}
