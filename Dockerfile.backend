@@ -1,0 +1,13 @@
+FROM node:16-alpine
+
+WORKDIR /app
+
+COPY package* ./backend/
+
+RUN npm install --force --prefix ./backend
+
+COPY backend ./backend
+
+EXPOSE 4000
+
+CMD ["sh", "-c", "cd /app/backend && node server.js "]
