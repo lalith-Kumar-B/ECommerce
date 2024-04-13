@@ -1,5 +1,5 @@
 {
-  "name": "26)e-commerse",
+  "name": "@nithish/backend",
   "version": "1.0.0",
   "description": "",
   "main": "./backend/server.js",
@@ -22,7 +22,6 @@
     "cookie-parser": "^1.4.6",
     "cookie-signature": "^1.0.6",
     "core-js": "^3.35.0",
-    "crypto": "^1.0.1",
     "debug": "^2.6.9",
     "define-data-property": "^1.1.1",
     "depd": "^2.0.0",
