@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  frontend: 
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+  backend: 
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    ports:
+      - "4000:4000"
+    environment:
+      - PORT=4000 # if you change this , then change the port mapping too ... 
+      - DB_URI=mongodb://mongo:27017/ecommerce # mongodb Container url that has volumes
+      - CLOUDINARY_NAME='' # get it from clouinary 
+      - CLOUDINARY_API_NAME='' # get it from clouinary 
+      - CLOUDINARY_API_SECRET='' # get it from clouinary 
+      - JWT_SECRET='' # generate a cryptograpic base64 hash and use it ...
+      - JWT_EXPIRE='' # jwt-token expiry time 
+      - DELETE_COOKIE='' # don't know what this is , go through the codebase to find out
+      - STRIPE_SECRET_KEY='' # get it from stripe
+      - STRIPE_API_KEY='' # get it from stripe 
+      - SMPT_MAIL='' # something to do with mail
+      - SMPT_PASSWORD='' # same here
+
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:

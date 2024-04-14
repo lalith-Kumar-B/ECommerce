@@ -12,5 +12,5 @@ cloudinary.config({
 });
   
 app.listen(process.env.PORT,()=>{
-    console.log("listning on port "+process.env.PORT);
+    console.log("Backend listening on port : "+process.env.PORT);
 });
