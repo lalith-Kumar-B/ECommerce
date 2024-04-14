@@ -1,21 +1,13 @@
 version: '3.8'
 
 services:
-  frontend: 
+  app: 
     build:
       context: .
-      dockerfile: Dockerfile.frontend
-    ports:
-      - "3000:3000"
-    depends_on:
-      - backend
-
-  backend: 
-    build:
-      context: .
-      dockerfile: Dockerfile.backend
+      dockerfile: Dockerfile
     ports:
       - "4000:4000"
+      - "3000:3000"
     environment:
       - PORT=4000 # if you change this , then change the port mapping too ... 
       - DB_URI=mongodb://mongo:27017/ecommerce # mongodb Container url that has volumes
